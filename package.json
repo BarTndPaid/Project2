@@ -1,23 +1,19 @@
 {
-  "name": "simple-jscalendar",
-  "version": "1.4.2",
-  "description": "Just a simple javascript calendar",
-  "main": "source/jsCalendar.js",
-  "directories": {
-    "example": "examples"
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jsCalendar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GramThanos/jsCalendar.git"
+    "url": "git+https://github.com/BarTndPaid/Project2.git"
   },
-  "keywords": [
-    "calendar",
-    "javascript"
-  ],
-  "author": "GramThanos",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GramThanos/jsCalendar/issues"
+    "url": "https://github.com/BarTndPaid/Project2/issues"
   },
-  "homepage": "https://gramthanos.github.io/jsCalendar/"
+  "homepage": "https://github.com/BarTndPaid/Project2#readme"
 }
