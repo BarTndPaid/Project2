@@ -1,6 +1,9 @@
 body {
     margin: 0 auto;
     background-image: url("https://images.pexels.com/photos/225236/pexels-photo-225236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -9,7 +12,6 @@ body {
     /* This is for ie8 and below */
     background: rgba(233, 211, 13, 0.61);
 }
-
 
 
 
