@@ -46,7 +46,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
         },
-        company:{
+        company: {
             type: Sequelize.BOOLEAN,
             allowNull: true,
             defaultValue: null
@@ -54,6 +54,20 @@ module.exports = function(sequelize, Sequelize) {
  
  
     });
+    User.associate = function(models){
+        User.hasMany(models.company, {
+            foreignKey: {
+                allowNull:false
+            }
+        });
+    };
+    User.associate = function(models){
+        User.hasMany(models.contractor, {
+            foreignKey: {
+                allowNull:false
+            }
+        });
+    };
  
     return User;
 

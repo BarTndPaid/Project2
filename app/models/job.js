@@ -5,10 +5,8 @@ module.exports = function(sequelize, Sequelize) {
         type: Sequelize.STRING,
         notEmpty: true
     },
-    id:{
-        type:Sequelize.INTERGER(5),
-        autoIncrement:true,
-        primaryKey:true
+    jobId:{
+        type:Sequelize.INTEGER
     },
     description:
     {
@@ -24,13 +22,23 @@ module.exports = function(sequelize, Sequelize) {
 
 });
 
-job.associate = function(models){
-    job.belongsTo(models.company, {
+Job.associate = function(models){
+    Job.belongsTo(models.company, {
         foreignKey:{
+            name:'companyId',
             allowNull:false
         }
     });
 };
+Job.associate = function(models){
+    Job.belongsTo(models.contractor, {
+        foreignKey:{
+            name:'contractorId',
+            allowNull:false
+        }
+    });
+};
+
 
 return Job;
 }

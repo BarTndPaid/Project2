@@ -5,6 +5,9 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars');
+const company = require('./app/models/company');
+const contractor = require('./app/models/contractor');
+const job= require('./app/models/job');
 
 //For BodyParser
 app.use(bodyParser.urlencoded({extended: true}));
@@ -36,6 +39,7 @@ app.get('/', function (req, res) {
 
 //Models
 var models = require("./app/models");
+
 
 
 //Routes
