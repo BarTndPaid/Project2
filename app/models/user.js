@@ -7,7 +7,7 @@ module.exports = function(sequelize, Sequelize) {
             primaryKey: true,
             type: Sequelize.INTEGER
         },
- 
+
         firstname: {
             type: Sequelize.STRING,
             notEmpty: true
@@ -45,11 +45,16 @@ module.exports = function(sequelize, Sequelize) {
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
+        },
+        company:{
+            type: Sequelize.BOOLEAN,
+            allowNull: true,
+            defaultValue: null
         }
  
  
     });
  
     return User;
- 
+
 }
