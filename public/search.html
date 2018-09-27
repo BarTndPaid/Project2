@@ -33,49 +33,50 @@
 </head>
 
 <body>
+    <!-- Navibar -->
     <header class="header">
         <h1 class="logo"><a href="#">BarTndPaid</a></h1>
         <ul class="main-nav">
             <li><a href="#">Register</a></li>
-            <li><a href="#">Sign-In</a></li>
+            <li><a href="#">Sign In</a></li>
             <li><a href="#"> Message</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </header>
+    <!-- End Navigation -->
 
-    <div class="jumbotron text-center">
-        <h1>BarTndPaid</h1>
-        <!-- temporary tag text -->
-        <h3>I'm a businessman; blood is a big expense. Hey, listen, I want somebody good - and I mean very good - to
-            plant
-            that gun.</h3>
-    </div>
+
+
 
     <div class="container">
-        <div class="row">
-            <div class="search-container">
-                <!-- Search form submission - Need name of search function-->
-                <form onsubmit="myFunction()">
-                    <input type="text" name="fname" placeholder="Search..">
-                    <input type="submit" value="Submit">
-                </form>
-                <br>
-                <br>
-            </div>
+        <div class="search-bar">
+            <!-- Search form submission - Need name of search function-->
+            <form name="searchBar" id="searchBar" onsubmit="return" method="get">
+                <input type="text" name="fname" placeholder="Search..">
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+            <br>
+        </div>
 
-            <div class="search-results" style="height:1000px;background: rgba(215, 240, 255, 0.61);font-size:36px">
 
+
+        <div class="results-stage" style="height:100px;background: rgba(215, 240, 255, 0.61);font-size:36px">
+            <!-- 1st div for the background color and container for flex-->
+
+
+            <div class="search-results">
                 <!-- Display Search results here -->
-                <p>Godfather ipsum dolor sit amet. You talk about vengeance. Is vengeance going to bring your son back
-                    to you? Or my boy to me? What's wrong with being a lawyer? Don Corleone, I am honored and grateful
-                    that you have invited me to your home on the wedding day of your daughter. And may their first
-                    child be a masculine child. It's a Sicilian message. It means Luca Brasi sleeps with the fishes. My
-                    father taught me many things here - he taught me in this room. He taught me: keep your friends
-                    close, but your enemies closer.</p>
+                <h2>This is stand in text for results</h2>
+            </div>
+            <div class="results-preview">
+                <!-- Display return detailed results here -->
+
             </div>
         </div>
+
     </div>
-    </div>
+
 
     <!-- Custom Script -->
     <script src="js/view.js" type="text/javascript"></script>

@@ -72,11 +72,6 @@ body {
   background-size: cover;
 }
 
-/* .main-container {
-    display: flex;
-    justify-content: center;
-  } */
-
 .logoTx {
   font-family: "Titillium Web", sans-serif;
   text-align: center;
@@ -98,6 +93,15 @@ p {
 /* ================================= 
     Media Queries NAV
   ==================================== */
+
+.search-bar {
+  display: flex;
+  height: 150px;
+  margin: 25px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(180, 111, 180, 0.452);
+}
 
 @media (min-width: 769px) {
   .header,
