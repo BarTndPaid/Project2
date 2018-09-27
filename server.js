@@ -60,7 +60,7 @@ models.sequelize.sync().then(function () {
 
 
 
-app.listen(5000, function (err) {
+app.listen(8060, function (err) {
     if (!err)
         console.log("Site is live");
     else console.log(err)
