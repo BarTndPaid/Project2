@@ -15,7 +15,7 @@ ul {
 h2,
 h3,
 a {
-  color: #34495e;
+  color: #29436b;
 }
 
 a {
@@ -118,6 +118,15 @@ p {
   justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.856);
   padding: 10px;
+}
+
+.loginDiv-container {
+  height: 100%;
+  padding: 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 769px) {
