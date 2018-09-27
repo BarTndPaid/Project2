@@ -1,12 +1,11 @@
 * {
   box-sizing: border-box;
 }
-body {
+/* body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
-  margin: 0;
   min-height: 100vh;
-}
+} */
 ul {
   margin: 0;
   padding: 0;
@@ -70,6 +69,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 .logoTx {
@@ -93,14 +95,29 @@ p {
 /* ================================= 
     Media Queries NAV
   ==================================== */
+.search-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 
 .search-bar {
   display: flex;
-  height: 150px;
+  height: 100px;
+  width: 600px;
   margin: 25px 0;
   justify-content: center;
   align-items: center;
-  background-color: rgba(180, 111, 180, 0.452);
+  background-color: rgba(250, 220, 157, 0.534);
+}
+
+.search-results {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.856);
+  padding: 10px;
 }
 
 @media (min-width: 769px) {
