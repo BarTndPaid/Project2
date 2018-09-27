@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+/* body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+} */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #29436b;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.45em;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: 0.99em;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: 1px solid #a2a2a2;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* Start Page Design */
+
+body {
+  margin: 0 auto;
+  background-image: url("https://images.pexels.com/photos/225236/pexels-photo-225236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.logoTx {
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  padding: 1em;
+  font-size: 5em;
+  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  padding: 2em;
+  letter-spacing: 3px;
+  background-color: #c0a5d671;
+}
+
+/* ================================= 
+    Media Queries NAV
+  ==================================== */
+.search-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  height: 100px;
+  width: 600px;
+  margin: 25px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(250, 220, 157, 0.534);
+}
+
+.search-results {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.856);
+  padding: 10px;
+}
+
+.loginDiv-container {
+  height: 100%;
+  padding: 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* End Nav */
