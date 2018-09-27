@@ -1,38 +1,68 @@
-// *****************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-//
-// ******************************************************************************
-// *** Dependencies
-// =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
-
-// Sets up the Express App
-// =============================================================
+var express = require('express');
 var app = express();
-var PORT = process.env.PORT || 8080;
+var passport = require('passport');
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var env = require('dotenv').load();
+var exphbs = require('express-handlebars');
+const company = require('./app/models/company');
+const contractor = require('./app/models/contractor');
+const job= require('./app/models/job');
 
-// Requiring our models for syncing
-var db = require("./models");
-
-// Sets up the Express app to handle data parsing
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-// parse application/json
+//For BodyParser
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-// Static directory
-app.use(express.static("public"));
 
-// Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
+// For Passport
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+
+//For Handlebars
+app.set('views', './app/views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
+
+
+app.get('/', function (req, res) {
+    res.send('Welcome to Passport with Sequelize');
+});
+
+
+//Models
+var models = require("./app/models");
+
+
+
+//Routes
+var authRoute = require('./app/routes/auth.js')(app, passport);
+
+
+//load passport strategies
+require('./app/config/passport')(passport, models.user);
+
+
+//Sync Database
+models.sequelize.sync().then(function () {
+    console.log('Nice! Database looks fine')
+
+}).catch(function (err) {
+    console.log(err, "Something went wrong with the Database Update!")
+});
+
+
+
+app.listen(8060, function (err) {
+    if (!err)
+        console.log("Site is live");
+    else console.log(err)
+
 });
